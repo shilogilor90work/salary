@@ -1,0 +1,54 @@
+
+Git:
+  git pull
+  git status
+  git checkout -b "name"
+  git checkout main
+  git checkout "<branch name>"
+  git commit -m "message"
+  git push
+  git push upstream....
+  git add <file name>
+
+
+  order:
+    git pull
+    git checkout -b "date_name"
+    git status
+    git add .
+    git commit -m "message"
+    git push
+    git push upstream...
+
+
+
+server:
+  python3 manage.py runserver
+  ctrl+c  -- to shut down.
+
+
+
+site:
+  http://127.0.0.1:8000/salary/compare
+  http://127.0.0.1:8000/salary/current
+
+
+html:
+  <>   -- tag   -- h1, h2,...h6. a, p, b, small, div,
+  https://www.w3schools.com/html/
+  https://www.w3schools.com/html/html_elements.asp
+  https://www.w3schools.com/html/html_css.asp
+  https://www.w3schools.com/html/html_images.asp
+  https://www.w3schools.com/html/html_tables.asp
+
+css:
+  https://www.w3schools.com/css/
+  https://www.w3schools.com/css/css_colors.asp
+  https://www.w3schools.com/css/css_background.asp
+  https://www.w3schools.com/css/css_border.asp
+  https://www.w3schools.com/css/css_margin.asp
+  https://www.w3schools.com/css/css_padding.asp
+
+
+django html:
+  https://docs.djangoproject.com/en/3.2/ref/templates/language/
