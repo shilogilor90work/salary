@@ -9,7 +9,8 @@ Git:
   git push
   git push upstream....
   git add <file name>
-
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
 
   order:
     git pull
