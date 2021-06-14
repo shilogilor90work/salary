@@ -1,3 +1,12 @@
+pre coding:
+  https://code.visualstudio.com/download
+  https://www.python.org/downloads/
+  https://docs.djangoproject.com/en/1.8/howto/windows/
+  https://www.youtube.com/watch?v=VuETrwKYLTM
+  https://www.youtube.com/watch?v=A7UAHPX_WLM
+
+
+
 
 Git:
   git pull
