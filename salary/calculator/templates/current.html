@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href='/static/current.css'>
+{% endblock head%}
+
+{% block content %}
+  <br><br>
+  <form method="POST" id="update_salary">
+  <label for="fname">name:</label>
+  <input type="text" id="name" name="name" value="{{current_salary.name}}"><br><br>
+  <label for="fname">salary:</label>
+  <input type="number" id="salary" name="salary" value="{{current_salary.salary}}" step=".01"><br><br>
+    <label for="fname">salary_net:</label>
+  <input type="number" id="salary_net" name="salary_net" value="{{current_salary.salary_net}}" step=".01"><br><br>
+    <label for="fname">day_hours:</label>
+  <input type="number" id="day_hours" name="day_hours" value="{{current_salary.day_hours}}" step=".01"><br><br>
+    <label for="fname">vacation_days:</label>
+  <input type="number" id="vacation_days" name="vacation_days" value={{current_salary.vacation_days}} step=".01"><br><br>
+      <label for="fname">travel_time:</label>
+  <input type="number" id="travel_time" name="travel_time" value={{current_salary.travel_time}} step=".01"><br><br>
+      <label for="fname">sickdays_value:</label>
+      <input type="text" id="sickdays_value" name="sickdays_value" value={{current_salary.sickdays_value}}><br><br>
+      <label for="fname">pension:</label>
+  <input type="number" id="pension" name="pension" value={{current_salary.pension}} step=".01"><br><br>
+      <label for="fname">pitzuim:</label>
+ <input type="number" id="pitzuim" name="pitzuim" value={{current_salary.pitzuim}} step=".01"><br><br>
+      <label for="fname">hishtalmut:</label>
+  <input type="number" id="hishtalmut" name="hishtalmut" value={{current_salary.hishtalmut}} step=".01"><br><br>
+      <label for="fname">nesiot_income:</label>
+  <input type="number" id="nesiot_income" name="nesiot_income" value={{current_salary.nesiot_income}} step=".01"><br><br>
+      <label for="fname">gas_cost:</label>
+  <input type="number" id="gas_cost" name="gas_cost" value={{current_salary.gas_cost}} step=".01"><br><br>
+      <label for="fname">lunch:</label>
+  <input type="number" id="lunch" name="lunch" value={{current_salary.lunch}} step=".01"><br><br>
+      <label for="fname">holidays_like_friday:</label>
+  <input type="text" id="holidays_like_friday" name="holidays_like_friday" value={{current_salary.holidays_like_friday}}><br><br>
+      <label for="fname">chol_hamoed:</label>
+  <input type="number" id="chol_hamoed" name="chol_hamoed" value={{current_salary.chol_hamoed}} step=".01"><br><br>
+  <label for="fname">parking:</label>
+  <input type="number" id="parking" name="parking" value={{current_salary.parking}} step=".01"><br><br>
+  <label for="fname">flexable_hours:</label>
+<input type="text" id="flexable_hours" name="flexable_hours" value={{current_salary.flexable_hours}}><br><br>
+<label for="fname">minimum_hours_aday:</label>
+<input type="number" id="minimum_hours_aday" name="minimum_hours_aday" value={{current_salary.minimum_hours_aday}} step=".01"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+<script>
+
+  $('form').on('submit',function(e){
+      e.preventDefault();
+      $.ajax({
+          type     : "POST",
+          cache    : false,
+          url      : "update_salary/",
+          data     : $(this).serialize(),
+          success  : function(data) {
+            console.log(data)
+          }
+      });
+
+  });
+</script>
+<br><br>
+
+{% endblock content %}

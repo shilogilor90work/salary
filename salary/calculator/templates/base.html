@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Salary</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      {% block head %}{% endblock head %}
+    </head>
+
+    <body>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="{% static 'base.css' %}">
+      <div class="header">
+        header block
+      </div>
+    <div class="">
+      {% block content %}{% endblock content %}
+
+    </div>
+    </body>
+</html>
